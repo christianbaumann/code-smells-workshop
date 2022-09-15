@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class Password {
 
-public Boolean validatePasswordStrength(String p) {
+public Boolean isPasswordValid(String p) {
     if (!p.isEmpty()) {
         Pattern pa = Pattern.compile("\\d", Pattern.CASE_INSENSITIVE);
         Matcher m = pa.matcher(p);

@@ -11,26 +11,26 @@ public class PasswordTests {
 
     @Test
     public void emptyPasswordGetsRejected() {
-        assertFalse(password.validatePasswordStrength(""));
+        assertFalse(password.isPasswordValid(""));
     }
 
     @Test
     public void tooShortPasswordWithNumberGetsRejected() {
-        assertFalse(password.validatePasswordStrength("password1"));
+        assertFalse(password.isPasswordValid("password1"));
     }
 
     @Test
     public void tooShortPasswordWithoutNumberGetsRejected() {
-        assertFalse(password.validatePasswordStrength("password"));
+        assertFalse(password.isPasswordValid("password"));
     }
 
     @Test
     public void longEnoughPasswordWithoutNumberGetsRejected() {
-        assertFalse(password.validatePasswordStrength("aVeryLongPassword"));
+        assertFalse(password.isPasswordValid("aVeryLongPassword"));
     }
 
     @Test
     public void longEnoughPasswordWithNumberGetsAccepted() {
-        assertTrue(password.validatePasswordStrength("longPasswordWithA123"));
+        assertTrue(password.isPasswordValid("longPasswordWithA123"));
     }
 }
