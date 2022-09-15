@@ -7,30 +7,33 @@ import org.junit.Test;
 
 public class PasswordTests {
 
-    private Password password = new Password();
-
     @Test
     public void emptyPasswordGetsRejected() {
-        assertFalse(password.isPasswordValid(""));
+        Password password = new Password("");
+        assertFalse(password.isPasswordValid());
     }
 
     @Test
     public void tooShortPasswordWithNumberGetsRejected() {
-        assertFalse(password.isPasswordValid("password1"));
+        Password password = new Password("password1");
+        assertFalse(password.isPasswordValid());
     }
 
     @Test
     public void tooShortPasswordWithoutNumberGetsRejected() {
-        assertFalse(password.isPasswordValid("password"));
+        Password password = new Password("password");
+        assertFalse(password.isPasswordValid());
     }
 
     @Test
     public void longEnoughPasswordWithoutNumberGetsRejected() {
-        assertFalse(password.isPasswordValid("aVeryLongPassword"));
+        Password password = new Password("aVeryLongPassword");
+        assertFalse(password.isPasswordValid());
     }
 
     @Test
     public void longEnoughPasswordWithNumberGetsAccepted() {
-        assertTrue(password.isPasswordValid("longPasswordWithA123"));
+        Password password = new Password("longPasswordWithA123");
+        assertTrue(password.isPasswordValid());
     }
 }
