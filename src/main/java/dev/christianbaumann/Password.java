@@ -33,8 +33,7 @@ public class Password {
     private boolean passwordContainsNumber() {
         Pattern pattern = Pattern.compile("\\d", Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(password);
-        boolean passwordHasNumber = matcher.find();
-        return passwordHasNumber;
+        return matcher.find();
     }
 
 }
