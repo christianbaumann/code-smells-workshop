@@ -14,6 +14,10 @@ public class App {
 
 
     public Boolean validatePasswordStrength(String password) {
-        return false;
+        if (!password.isEmpty()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

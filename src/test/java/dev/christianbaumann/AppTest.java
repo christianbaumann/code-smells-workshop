@@ -10,7 +10,12 @@ public class AppTest {
     private App app = new App();
 
     @Test
-    public void shouldReturnFalse(){
+    public void emptyPasswordGetsRejected() {
         assertFalse(app.validatePasswordStrength(""));
+    }
+
+    @Test
+    public void nonEmptyPasswordGetsAccepted() {
+        assertTrue(app.validatePasswordStrength("password"));
     }
 }
