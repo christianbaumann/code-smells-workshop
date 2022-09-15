@@ -15,7 +15,22 @@ public class AppTest {
     }
 
     @Test
-    public void nonEmptyPasswordGetsAccepted() {
-        assertTrue(app.validatePasswordStrength("password"));
+    public void tooShortPasswordWithNumberGetsRejected() {
+        assertFalse(app.validatePasswordStrength("password1"));
+    }
+
+    @Test
+    public void tooShortPasswordWithoutNumberGetsRejected() {
+        assertFalse(app.validatePasswordStrength("password"));
+    }
+
+    @Test
+    public void longEnoughPasswordWithoutNumberGetsRejected() {
+        assertFalse(app.validatePasswordStrength("aVeryLongPassword"));
+    }
+
+    @Test
+    public void longEnoughPasswordWithNumberGetsAccepted() {
+        assertTrue(app.validatePasswordStrength("longPasswordWithA123"));
     }
 }

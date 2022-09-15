@@ -15,7 +15,19 @@ public class App {
 
     public Boolean validatePasswordStrength(String password) {
         if (!password.isEmpty()) {
-            return true;
+            Pattern p = Pattern.compile("\\d", Pattern.CASE_INSENSITIVE);
+            Matcher m = p.matcher(password);
+            Boolean hasDigit = m.find();
+            if (hasDigit) {
+                Boolean longEnough = password.length() > 10;
+                if (longEnough) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
         } else {
             return false;
         }
