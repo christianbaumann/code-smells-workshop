@@ -5,32 +5,32 @@ import static org.junit.Assert.assertFalse;
 
 import org.junit.Test;
 
-public class AppTest {
+public class PasswordTests {
 
-    private App app = new App();
+    private Password password = new Password();
 
     @Test
     public void emptyPasswordGetsRejected() {
-        assertFalse(app.validatePasswordStrength(""));
+        assertFalse(password.validatePasswordStrength(""));
     }
 
     @Test
     public void tooShortPasswordWithNumberGetsRejected() {
-        assertFalse(app.validatePasswordStrength("password1"));
+        assertFalse(password.validatePasswordStrength("password1"));
     }
 
     @Test
     public void tooShortPasswordWithoutNumberGetsRejected() {
-        assertFalse(app.validatePasswordStrength("password"));
+        assertFalse(password.validatePasswordStrength("password"));
     }
 
     @Test
     public void longEnoughPasswordWithoutNumberGetsRejected() {
-        assertFalse(app.validatePasswordStrength("aVeryLongPassword"));
+        assertFalse(password.validatePasswordStrength("aVeryLongPassword"));
     }
 
     @Test
     public void longEnoughPasswordWithNumberGetsAccepted() {
-        assertTrue(app.validatePasswordStrength("longPasswordWithA123"));
+        assertTrue(password.validatePasswordStrength("longPasswordWithA123"));
     }
 }
