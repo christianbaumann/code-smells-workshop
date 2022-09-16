@@ -13,27 +13,22 @@ public class Password {
     }
 
     public Boolean isPasswordValid() {
-        boolean passwordIsEmpty = password.isEmpty();
-        if (passwordIsEmpty) {
+        if (password.isEmpty()) {
             return false;
         }
-
-        if (!passwordContainsNumber()) {
+        if (passwordContainsNoDigit()) {
             return false;
         }
-
-        boolean passwordIsLongEnough = password.length() >= passwordMinimumLength;
-        if (!passwordIsLongEnough) {
+        if (password.length() < passwordMinimumLength) {
             return false;
         }
-
         return true;
     }
 
-    private boolean passwordContainsNumber() {
+    private boolean passwordContainsNoDigit() {
         Pattern pattern = Pattern.compile("\\d", Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(password);
-        return matcher.find();
+        return !matcher.find();
     }
 
 }
