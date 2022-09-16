@@ -1,8 +1,9 @@
-package dev.christianbaumann;
+package dev.christianbaumann.password;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
+import dev.christianbaumann.password.Password;
 import org.junit.Test;
 
 public class PasswordTests {

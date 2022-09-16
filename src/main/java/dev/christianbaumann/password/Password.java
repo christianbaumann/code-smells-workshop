@@ -1,4 +1,4 @@
-package dev.christianbaumann;
+package dev.christianbaumann.password;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

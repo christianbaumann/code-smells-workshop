@@ -1,4 +1,4 @@
-package dev.christianbaumann;
+package dev.christianbaumann.person;
 
 import org.junit.Test;
 
