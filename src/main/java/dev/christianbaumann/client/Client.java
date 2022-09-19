@@ -21,9 +21,6 @@ public class Client {
             case RECTANGLE:
                 area = a * b;
                 break;
-            case CIRCLE:
-                area = Math.PI * r * r;
-                break;
         }
 
         return area;
@@ -38,9 +35,6 @@ public class Client {
                 break;
             case RECTANGLE:
                 perimeter = 2 * (a + b);
-                break;
-            case CIRCLE:
-                perimeter = 2 * 3.14 * r;
                 break;
         }
 
