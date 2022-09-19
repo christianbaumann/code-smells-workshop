@@ -1,7 +1,6 @@
 package dev.christianbaumann.client;
 
-public enum Shape {
-    SQUARE,
-    RECTANGLE,
-    CIRCLE,
+public interface Shape {
+    double calculateArea();
+    double calculatePerimeter();
 }

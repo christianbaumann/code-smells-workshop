@@ -6,35 +6,26 @@ import static org.junit.Assert.assertEquals;
 
 public class ClientTests {
 
-    private Client circle = new Client(6,4, 3);
+    private Client square = new Client(new Square(6));
+    private Client rectangle = new Client(new Rectangle(6, 4));
 
     @Test
     public void squareArea() {
-        assertEquals(36, circle.calculateArea(Shape.SQUARE), 0);
+        assertEquals(36, square.calculateArea(), 0);
     }
 
     @Test
     public void squarePerimeter() {
-        assertEquals(24, circle.calculatePerimeter(Shape.SQUARE), 0);
+        assertEquals(24, square.calculatePerimeter(), 0);
     }
 
     @Test
     public void rectangleArea() {
-        assertEquals(24, circle.calculateArea(Shape.RECTANGLE), 0);
+        assertEquals(24, rectangle.calculateArea(), 0);
     }
 
     @Test
     public void rectanglePerimeter() {
-        assertEquals(20, circle.calculatePerimeter(Shape.RECTANGLE), 0);
-    }
-
-    @Test
-    public void circleArea() {
-        assertEquals(28.27, circle.calculateArea(Shape.CIRCLE), 0.01);
-    }
-
-    @Test
-    public void circlePerimeter() {
-        assertEquals(18.84, circle.calculatePerimeter(Shape.CIRCLE), 0.01);
+        assertEquals(20, rectangle.calculatePerimeter(), 0);
     }
 }
