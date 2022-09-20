@@ -1,5 +1,8 @@
 package dev.christianbaumann.rose;
 
+/*
+ * Source: https://github.com/emilybache/GildedRose-Refactoring-Kata
+ */
 class GildedRose {
     Item item;
 
