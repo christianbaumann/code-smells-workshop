@@ -1,5 +1,8 @@
 package dev.christianbaumann.rose;
 
+/*
+ * Source: https://github.com/emilybache/GildedRose-Refactoring-Kata
+ */
 public class Item {
 
     public String name;
