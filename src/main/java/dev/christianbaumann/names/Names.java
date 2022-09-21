@@ -1,6 +1,6 @@
-package dev.christianbaumann.miscellaneous;
+package dev.christianbaumann.names;
 
-public class Miscellaneous {
+public class Names {
 
     String foo;
     Integer bar;
