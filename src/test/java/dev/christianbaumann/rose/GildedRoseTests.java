@@ -8,9 +8,9 @@ public class GildedRoseTests {
 
     @Test
     public void foo() {
-        Item[] items = new Item[]{new Item("foo", 0, 0)};
-        GildedRose app = new GildedRose(items);
+        Item item = new Item("foo", 0, 0);
+        GildedRose app = new GildedRose(item);
         app.updateQuality();
-        assertEquals("fixme", app.items[0].name);
+        assertEquals("fixme", app.item.name);
     }
 }
