@@ -1,15 +1,15 @@
 package dev.christianbaumann.cuboid;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CuboidTests {
+class CuboidTests {
 
     private Cuboid cuboid = new Cuboid(6, 4, 3);
 
     @Test
-    public void area() {
+    void area() {
         assertEquals(108, cuboid.calculateArea());
     }
 }

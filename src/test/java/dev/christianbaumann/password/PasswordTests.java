@@ -1,39 +1,37 @@
 package dev.christianbaumann.password;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import dev.christianbaumann.password.Password;
+import org.junit.jupiter.api.Test;
 
-public class PasswordTests {
+class PasswordTests {
+
+    private Password password = new Password();
 
     @Test
-    public void emptyPasswordGetsRejected() {
-        Password password = new Password("");
-        assertFalse(password.isPasswordValid());
+    void emptyPasswordGetsRejected() {
+        assertFalse(password.validatePasswordStrength(""));
     }
 
     @Test
-    public void tooShortPasswordWithNumberGetsRejected() {
-        Password password = new Password("password1");
-        assertFalse(password.isPasswordValid());
+    void tooShortPasswordWithNumberGetsRejected() {
+        assertFalse(password.validatePasswordStrength("password1"));
     }
 
     @Test
-    public void tooShortPasswordWithoutNumberGetsRejected() {
-        Password password = new Password("password");
-        assertFalse(password.isPasswordValid());
+    void tooShortPasswordWithoutNumberGetsRejected() {
+        assertFalse(password.validatePasswordStrength("password"));
     }
 
     @Test
-    public void longEnoughPasswordWithoutNumberGetsRejected() {
-        Password password = new Password("aVeryLongPassword");
-        assertFalse(password.isPasswordValid());
+    void longEnoughPasswordWithoutNumberGetsRejected() {
+        assertFalse(password.validatePasswordStrength("aVeryLongPassword"));
     }
 
     @Test
-    public void longEnoughPasswordWithNumberGetsAccepted() {
-        Password password = new Password("longPasswordWithA123");
-        assertTrue(password.isPasswordValid());
+    void longEnoughPasswordWithNumberGetsAccepted() {
+        assertTrue(password.validatePasswordStrength("longPasswordWithA123"));
     }
 }
