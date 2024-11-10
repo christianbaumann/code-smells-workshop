@@ -1,15 +1,15 @@
 package dev.christianbaumann.rose;
 
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class GildedRoseTests {
+class GildedRoseTests {
 
-    @Ignore
+    @Disabled
     @Test
-    public void foo() {
+    void foo() {
         Item item = new Item("foo", 0, 0);
         GildedRose app = new GildedRose(item);
         app.updateQuality();

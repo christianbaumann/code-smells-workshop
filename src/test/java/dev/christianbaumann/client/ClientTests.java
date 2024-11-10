@@ -1,30 +1,30 @@
 package dev.christianbaumann.client;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ClientTests {
+class ClientTests {
 
     private Client client = new Client(6,4, 3);
 
     @Test
-    public void squareArea() {
+    void squareArea() {
         assertEquals(36, client.calculateArea(Shape.SQUARE), 0);
     }
 
     @Test
-    public void squarePerimeter() {
+    void squarePerimeter() {
         assertEquals(24, client.calculatePerimeter(Shape.SQUARE), 0);
     }
 
     @Test
-    public void rectangleArea() {
+    void rectangleArea() {
         assertEquals(24, client.calculateArea(Shape.RECTANGLE), 0);
     }
 
     @Test
-    public void rectanglePerimeter() {
+    void rectanglePerimeter() {
         assertEquals(20, client.calculatePerimeter(Shape.RECTANGLE), 0);
     }
 }
