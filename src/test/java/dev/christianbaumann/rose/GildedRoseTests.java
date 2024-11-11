@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTests {
 
-    @Disabled
     @Test
     void foo() {
         Item item = new Item("foo", 0, 0);
