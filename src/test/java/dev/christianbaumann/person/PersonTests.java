@@ -9,13 +9,27 @@ class PersonTests {
 
     @Test
     void personAged16CanBuyAlcohol() {
+        // Arrange
         Person person = new Person();
-        assertTrue(person.isOldEnoughToBuyAlcohol(16));
+        int age = 16;
+
+        // Act
+        boolean canBuyAlcohol = person.isOldEnoughToBuyAlcohol(age);
+
+        // Assert
+        assertTrue(canBuyAlcohol);
     }
 
     @Test
     void personAged15CanNotBuyAlcohol() {
+        // Arrange
         Person person = new Person();
-        assertFalse(person.isOldEnoughToBuyAlcohol(15));
+        int age = 15;
+
+        // Act
+        boolean canBuyAlcohol = person.isOldEnoughToBuyAlcohol(age);
+
+        // Assert
+        assertFalse(canBuyAlcohol);
     }
 }

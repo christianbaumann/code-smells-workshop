@@ -12,26 +12,61 @@ class PasswordTests {
 
     @Test
     void emptyPasswordGetsRejected() {
-        assertFalse(password.validatePasswordStrength(""));
+        // Arrange
+        String input = "";
+
+        // Act
+        boolean isValid = password.validatePasswordStrength(input);
+
+        // Assert
+        assertFalse(isValid);
     }
 
     @Test
     void tooShortPasswordWithNumberGetsRejected() {
-        assertFalse(password.validatePasswordStrength("password1"));
+        // Arrange
+        String input = "password1";
+
+        // Act
+        boolean isValid = password.validatePasswordStrength(input);
+
+        // Assert
+        assertFalse(isValid);
     }
 
     @Test
     void tooShortPasswordWithoutNumberGetsRejected() {
-        assertFalse(password.validatePasswordStrength("password"));
+        // Arrange
+        String input = "password";
+
+        // Act
+        boolean isValid = password.validatePasswordStrength(input);
+
+        // Assert
+        assertFalse(isValid);
     }
 
     @Test
     void longEnoughPasswordWithoutNumberGetsRejected() {
-        assertFalse(password.validatePasswordStrength("aVeryLongPassword"));
+        // Arrange
+        String input = "aVeryLongPassword";
+
+        // Act
+        boolean isValid = password.validatePasswordStrength(input);
+
+        // Assert
+        assertFalse(isValid);
     }
 
     @Test
     void longEnoughPasswordWithNumberGetsAccepted() {
-        assertTrue(password.validatePasswordStrength("longPasswordWithA123"));
+        // Arrange
+        String input = "longPasswordWithA123";
+
+        // Act
+        boolean isValid = password.validatePasswordStrength(input);
+
+        // Assert
+        assertTrue(isValid);
     }
 }
