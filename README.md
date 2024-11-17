@@ -2,10 +2,10 @@
 
 ## Setup
 
-### You have an IDEA & Java installed and know how to get code from github
+### You have an IDE & Java installed and know how to get code from github
 
 1. Clone the repo: https://github.com/christianbaumann/code-smells-workshop
-2. Open the project in your IDEA of choice
+2. Open the project in your IDE of choice
 
 ### You have no idea what the previous paragraph is about
 
