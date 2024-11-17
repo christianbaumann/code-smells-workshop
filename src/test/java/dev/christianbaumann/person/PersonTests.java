@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class PersonTests {
 
     @Test
-    void personAged16CanBuyAlcohol() {
+    void allowsAlcoholPurchaseAtAge16() {
         // Arrange
         Person person = new Person();
         int age = 16;
@@ -21,7 +21,7 @@ class PersonTests {
     }
 
     @Test
-    void personAged15CanNotBuyAlcohol() {
+    void deniesAlcoholPurchaseAtAge15() {
         // Arrange
         Person person = new Person();
         int age = 15;

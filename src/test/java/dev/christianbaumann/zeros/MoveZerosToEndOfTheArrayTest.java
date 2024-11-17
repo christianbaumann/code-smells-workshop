@@ -7,51 +7,93 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 class MoveZerosToEndOfTheArrayTest {
 
     @Test
-    void allZeros() {
+    void keepsOnlyZeros() {
+        // Arrange
         int[] input = {0, 0, 0, 0};
         int[] expected = {0, 0, 0, 0};
-        assertArrayEquals(expected, MoveZerosToEndOfTheArray.removeZeros(input));
+
+        // Act
+        int[] result = MoveZerosToEndOfTheArray.removeZeros(input);
+
+        // Assert
+        assertArrayEquals(expected, result);
     }
 
     @Test
-    void noZeros() {
+    void keepsAllNonZeros() {
+        // Arrange
         int[] input = {1, 2, 3, 4};
         int[] expected = {1, 2, 3, 4};
-        assertArrayEquals(expected, MoveZerosToEndOfTheArray.removeZeros(input));
+
+        // Act
+        int[] result = MoveZerosToEndOfTheArray.removeZeros(input);
+
+        // Assert
+        assertArrayEquals(expected, result);
     }
 
     @Test
-    void mixedZerosAndNonZeros() {
+    void movesZerosToEnd() {
+        // Arrange
         int[] input = {0, 1, 0, 3, 4, 0, 5};
         int[] expected = {1, 3, 4, 5, 0, 0, 0};
-        assertArrayEquals(expected, MoveZerosToEndOfTheArray.removeZeros(input));
+
+        // Act
+        int[] result = MoveZerosToEndOfTheArray.removeZeros(input);
+
+        // Assert
+        assertArrayEquals(expected, result);
     }
 
     @Test
-    void emptyArray() {
+    void handlesEmptyArray() {
+        // Arrange
         int[] input = {};
         int[] expected = {};
-        assertArrayEquals(expected, MoveZerosToEndOfTheArray.removeZeros(input));
+
+        // Act
+        int[] result = MoveZerosToEndOfTheArray.removeZeros(input);
+
+        // Assert
+        assertArrayEquals(expected, result);
     }
 
     @Test
-    void allNonZeros() {
+    void handlesOnlyNonZeros() {
+        // Arrange
         int[] input = {5, 8, 6, 2};
         int[] expected = {5, 8, 6, 2};
-        assertArrayEquals(expected, MoveZerosToEndOfTheArray.removeZeros(input));
+
+        // Act
+        int[] result = MoveZerosToEndOfTheArray.removeZeros(input);
+
+        // Assert
+        assertArrayEquals(expected, result);
     }
 
     @Test
-    void singleZero() {
+    void handlesSingleZero() {
+        // Arrange
         int[] input = {0};
         int[] expected = {0};
-        assertArrayEquals(expected, MoveZerosToEndOfTheArray.removeZeros(input));
+
+        // Act
+        int[] result = MoveZerosToEndOfTheArray.removeZeros(input);
+
+        // Assert
+        assertArrayEquals(expected, result);
     }
 
     @Test
-    void singleNonZero() {
+    void handlesSingleNonZero() {
+        // Arrange
         int[] input = {7};
         int[] expected = {7};
-        assertArrayEquals(expected, MoveZerosToEndOfTheArray.removeZeros(input));
+
+        // Act
+        int[] result = MoveZerosToEndOfTheArray.removeZeros(input);
+
+        // Assert
+        assertArrayEquals(expected, result);
     }
 }

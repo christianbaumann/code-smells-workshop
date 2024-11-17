@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class CuboidTests {
 
     @Test
-    void area() {
+    void calculatesArea() {
         // Arrange
         Cuboid testCuboid = new Cuboid(6, 4, 3);
 
