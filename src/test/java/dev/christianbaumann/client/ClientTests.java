@@ -9,7 +9,7 @@ class ClientTests {
     private Client client = new Client(6, 4, 3);
 
     @Test
-    void squareArea() {
+    void calculatesSquareArea() {
         // Arrange
         Shape shape = Shape.SQUARE;
 
@@ -21,7 +21,7 @@ class ClientTests {
     }
 
     @Test
-    void squarePerimeter() {
+    void calculatesSquarePerimeter() {
         // Arrange
         Shape shape = Shape.SQUARE;
 
@@ -33,7 +33,7 @@ class ClientTests {
     }
 
     @Test
-    void rectangleArea() {
+    void calculatesRectangleArea() {
         // Arrange
         Shape shape = Shape.RECTANGLE;
 
@@ -45,7 +45,7 @@ class ClientTests {
     }
 
     @Test
-    void rectanglePerimeter() {
+    void calculatesRectanglePerimeter() {
         // Arrange
         Shape shape = Shape.RECTANGLE;
 

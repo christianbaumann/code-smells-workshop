@@ -11,7 +11,7 @@ class PasswordTests {
     private Password password = new Password();
 
     @Test
-    void emptyPasswordGetsRejected() {
+    void rejectsEmptyPassword() {
         // Arrange
         String input = "";
 
@@ -23,7 +23,7 @@ class PasswordTests {
     }
 
     @Test
-    void tooShortPasswordWithNumberGetsRejected() {
+    void rejectsTooShortPasswordWithNumber() {
         // Arrange
         String input = "password1";
 
@@ -35,7 +35,7 @@ class PasswordTests {
     }
 
     @Test
-    void tooShortPasswordWithoutNumberGetsRejected() {
+    void rejectsTooShortPasswordWithoutNumber() {
         // Arrange
         String input = "password";
 
@@ -47,7 +47,7 @@ class PasswordTests {
     }
 
     @Test
-    void longEnoughPasswordWithoutNumberGetsRejected() {
+    void rejectsLongEnoughPasswordWithoutNumber() {
         // Arrange
         String input = "aVeryLongPassword";
 
@@ -59,7 +59,7 @@ class PasswordTests {
     }
 
     @Test
-    void longEnoughPasswordWithNumberGetsAccepted() {
+    void acceptsLongEnoughPasswordWithNumber() {
         // Arrange
         String input = "longPasswordWithA123";
 
