@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-class MoveZerosToEndOfTheArrayTest {
+class ZeroMoverTest {
 
     @Test
     void keepsOnlyZeros() {
@@ -13,7 +13,7 @@ class MoveZerosToEndOfTheArrayTest {
         int[] expected = {0, 0, 0, 0};
 
         // Act
-        int[] result = MoveZerosToEndOfTheArray.removeZeros(input);
+        int[] result = ZeroMover.moveZerosToEnd(input);
 
         // Assert
         assertArrayEquals(expected, result);
@@ -26,7 +26,7 @@ class MoveZerosToEndOfTheArrayTest {
         int[] expected = {1, 2, 3, 4};
 
         // Act
-        int[] result = MoveZerosToEndOfTheArray.removeZeros(input);
+        int[] result = ZeroMover.moveZerosToEnd(input);
 
         // Assert
         assertArrayEquals(expected, result);
@@ -39,7 +39,7 @@ class MoveZerosToEndOfTheArrayTest {
         int[] expected = {1, 3, 4, 5, 0, 0, 0};
 
         // Act
-        int[] result = MoveZerosToEndOfTheArray.removeZeros(input);
+        int[] result = ZeroMover.moveZerosToEnd(input);
 
         // Assert
         assertArrayEquals(expected, result);
@@ -52,7 +52,7 @@ class MoveZerosToEndOfTheArrayTest {
         int[] expected = {};
 
         // Act
-        int[] result = MoveZerosToEndOfTheArray.removeZeros(input);
+        int[] result = ZeroMover.moveZerosToEnd(input);
 
         // Assert
         assertArrayEquals(expected, result);
@@ -65,7 +65,7 @@ class MoveZerosToEndOfTheArrayTest {
         int[] expected = {5, 8, 6, 2};
 
         // Act
-        int[] result = MoveZerosToEndOfTheArray.removeZeros(input);
+        int[] result = ZeroMover.moveZerosToEnd(input);
 
         // Assert
         assertArrayEquals(expected, result);
@@ -78,7 +78,7 @@ class MoveZerosToEndOfTheArrayTest {
         int[] expected = {0};
 
         // Act
-        int[] result = MoveZerosToEndOfTheArray.removeZeros(input);
+        int[] result = ZeroMover.moveZerosToEnd(input);
 
         // Assert
         assertArrayEquals(expected, result);
@@ -91,7 +91,7 @@ class MoveZerosToEndOfTheArrayTest {
         int[] expected = {7};
 
         // Act
-        int[] result = MoveZerosToEndOfTheArray.removeZeros(input);
+        int[] result = ZeroMover.moveZerosToEnd(input);
 
         // Assert
         assertArrayEquals(expected, result);
