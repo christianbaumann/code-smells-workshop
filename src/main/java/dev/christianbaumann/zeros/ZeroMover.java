@@ -3,7 +3,7 @@ package dev.christianbaumann.zeros;
 /**
  * This class provides a method to move all zeros to the end of an integer array.
  */
-public class MoveZerosToEndOfTheArray {
+public class ZeroMover {
 
     /**
      * Moves all zeros to the end of the given array.
@@ -19,7 +19,7 @@ public class MoveZerosToEndOfTheArray {
      * @param arr The integer array to be modified.
      * @return The modified array with zeros moved to the end.
      */
-    public static int[] removeZeros(int[] arr) {
+    public static int[] moveZerosToEnd(int[] arr) {
         int j = 0; // Pointer to keep track of the position where non-zero elements will be placed
         for (int i = 0; i < arr.length; i++) {
             // If the current element is non-zero and the element at j position is zero
@@ -50,7 +50,7 @@ public class MoveZerosToEndOfTheArray {
     public static void main(String[] args) {
         int[] arr = {1, 0, 3, 4, 0, 4};
         // Call the removeZeros method to move zeros to the end
-        int[] modifiedArray = removeZeros(arr);
+        int[] modifiedArray = moveZerosToEnd(arr);
         // Print the modified array
         for (int e : modifiedArray) {
             System.out.print(e + " ");
