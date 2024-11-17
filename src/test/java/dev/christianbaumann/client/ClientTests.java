@@ -4,55 +4,28 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class ClientTests {
+public class ClientTests {
 
-    private Client client = new Client(6, 4, 3);
+    private Client square = new Client(new Square(6));
+    private Client rectangle = new Client(new Rectangle(6, 4));
 
     @Test
-    void calculatesSquareArea() {
-        // Arrange
-        Shape shape = Shape.SQUARE;
-
-        // Act
-        double result = client.calculateArea(shape);
-
-        // Assert
-        assertEquals(36, result, 0);
+    public void squareArea() {
+        assertEquals(36, square.calculateArea(), 0);
     }
 
     @Test
-    void calculatesSquarePerimeter() {
-        // Arrange
-        Shape shape = Shape.SQUARE;
-
-        // Act
-        double result = client.calculatePerimeter(shape);
-
-        // Assert
-        assertEquals(24, result, 0);
+    public void squarePerimeter() {
+        assertEquals(24, square.calculatePerimeter(), 0);
     }
 
     @Test
-    void calculatesRectangleArea() {
-        // Arrange
-        Shape shape = Shape.RECTANGLE;
-
-        // Act
-        double result = client.calculateArea(shape);
-
-        // Assert
-        assertEquals(24, result, 0);
+    public void rectangleArea() {
+        assertEquals(24, rectangle.calculateArea(), 0);
     }
 
     @Test
-    void calculatesRectanglePerimeter() {
-        // Arrange
-        Shape shape = Shape.RECTANGLE;
-
-        // Act
-        double result = client.calculatePerimeter(shape);
-
-        // Assert
-        assertEquals(20, result, 0);
+    public void rectanglePerimeter() {
+        assertEquals(20, rectangle.calculatePerimeter(), 0);
     }
 }

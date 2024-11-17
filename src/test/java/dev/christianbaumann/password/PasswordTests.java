@@ -7,16 +7,17 @@ import dev.christianbaumann.password.Password;
 import org.junit.jupiter.api.Test;
 
 class PasswordTests {
-
-    private Password password = new Password();
+    
+    private Password password;
 
     @Test
     void rejectsEmptyPassword() {
         // Arrange
         String input = "";
+        password = new Password(input);
 
         // Act
-        boolean isValid = password.validatePasswordStrength(input);
+        boolean isValid = password.isPasswordValid();
 
         // Assert
         assertFalse(isValid);
@@ -26,9 +27,10 @@ class PasswordTests {
     void rejectsTooShortPasswordWithNumber() {
         // Arrange
         String input = "password1";
+        password = new Password(input);
 
         // Act
-        boolean isValid = password.validatePasswordStrength(input);
+        boolean isValid = password.isPasswordValid();
 
         // Assert
         assertFalse(isValid);
@@ -38,9 +40,10 @@ class PasswordTests {
     void rejectsTooShortPasswordWithoutNumber() {
         // Arrange
         String input = "password";
+        password = new Password(input);
 
         // Act
-        boolean isValid = password.validatePasswordStrength(input);
+        boolean isValid = password.isPasswordValid();
 
         // Assert
         assertFalse(isValid);
@@ -50,9 +53,10 @@ class PasswordTests {
     void rejectsLongEnoughPasswordWithoutNumber() {
         // Arrange
         String input = "aVeryLongPassword";
+        password = new Password(input);
 
         // Act
-        boolean isValid = password.validatePasswordStrength(input);
+        boolean isValid = password.isPasswordValid();
 
         // Assert
         assertFalse(isValid);
@@ -62,9 +66,10 @@ class PasswordTests {
     void acceptsLongEnoughPasswordWithNumber() {
         // Arrange
         String input = "longPasswordWithA123";
+        password = new Password(input);
 
         // Act
-        boolean isValid = password.validatePasswordStrength(input);
+        boolean isValid = password.isPasswordValid();
 
         // Assert
         assertTrue(isValid);
